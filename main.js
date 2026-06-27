@@ -70,6 +70,29 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navButton = document.querySelector(".nav-button");
 const navLinks = document.querySelectorAll(".nav-button a");
 
+const closeNavigation = () => {
+  navButton.classList.remove("open");
+  menuToggle.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open navigation");
+};
+
+const scrollToSectionCenter = (hash) => {
+  const target = document.querySelector(hash);
+
+  if (!target) {
+    return;
+  }
+
+  target.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "nearest",
+  });
+
+  history.pushState(null, "", hash);
+};
+
 menuToggle.addEventListener("click", () => {
   const isOpen = navButton.classList.toggle("open");
 
@@ -82,10 +105,9 @@ menuToggle.addEventListener("click", () => {
 });
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navButton.classList.remove("open");
-    menuToggle.classList.remove("open");
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation");
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    closeNavigation();
+    scrollToSectionCenter(link.getAttribute("href"));
   });
 });
