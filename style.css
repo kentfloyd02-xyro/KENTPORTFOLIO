@@ -85,6 +85,9 @@ nav {
     transform: translateY(0px);
   }
 }
+.highlight{
+  position: fixed;
+}
 .logo {
   display: flex;
   flex-direction: row;
@@ -231,9 +234,14 @@ h2 {
   font-size: 25px;
 }
 .home-subheading {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 22ch;
   align-items: center;
-  gap: 8px;
+  column-gap: 8px;
+}
+.highlight {
+  position: static;
+  display: inline-block;
 }
 .typewriter {
   display: inline-block;
@@ -242,6 +250,7 @@ h2 {
   border-right: 2px solid var(--accent);
   color: var(--primary);
   font-weight: bold;
+  width: 0;
 
   animation:
     typing 4s steps(22, end) infinite,

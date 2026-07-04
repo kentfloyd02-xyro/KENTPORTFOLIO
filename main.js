@@ -4,35 +4,35 @@ const testimonials = [
     role: "Team Collaboration",
     content:
       "Reliable, easy to work with, and consistent in delivering clean results during group projects.",
-    image: "KentImage.png",
+    image: "image/face1.jpg",
   },
   {
     name: "Classmate",
     role: "Web Development",
     content:
       "Shows strong commitment to learning new tools and improving the quality of his work.",
-    image: "KentImage.png",
+    image: "image/face2.jpg",
   },
   {
     name: "Peer Reviewer",
     role: "Code Review",
     content:
       "Communicates well, accepts feedback, and applies it quickly to build better solutions.",
-    image: "KentImage.png",
+    image: "image/face3.jpg",
   },
   {
     name: "Team Lead",
     role: "Project Support",
     content:
       "Demonstrates a professional attitude, solid problem solving, and a clear willingness to grow.",
-    image: "KentImage.png",
+    image: "image/face4.jpg",
   },
   {
     name: "Mentor",
     role: "Technical Guidance",
     content:
       "A promising developer who brings focus, discipline, and a thoughtful approach to each task.",
-    image: "KentImage.png",
+    image: "image/face5.jpg",
   },
 ];
 
