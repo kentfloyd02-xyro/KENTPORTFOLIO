@@ -185,8 +185,11 @@ section {
   scroll-margin-top: 110px;
 }
 
-#About , #Skills , #Projects , #Testimonials{
-  background:linear-gradient(180deg, #ffffff 0%, #f8f2f2 100%);
+#About,
+#Skills,
+#Projects,
+#Testimonials {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f2f2 100%);
 }
 
 h2 {
@@ -337,7 +340,11 @@ h2 {
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.09), transparent 35%),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.09),
+      transparent 35%
+    ),
     linear-gradient(145deg, rgba(92, 1, 1, 0.96), rgba(0, 0, 0, 0.96));
   box-shadow:
     0 26px 70px rgba(0, 0, 0, 0.2),
@@ -360,111 +367,98 @@ h2 {
 
 .split-title,
 .split-title span {
-    font-family: Bungee, sans-serif;
+  font-family: Bungee, sans-serif;
 }
 
 .split-title {
-    position: relative;
-    display: inline-block;
-    font-size: 50px;
-    font-weight: bold;
-    color: transparent;
-    text-shadow: 0 0 0 var(--accent);
-    padding: 0 16px;
-    overflow: hidden;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.5s ease;
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 0 0 0 var(--accent);
+  padding: 0 16px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.5s ease;
 }
 
 section > h2.split-title {
-    display: block;
-    max-width: 100%;
-    width: fit-content;
-    margin: 0 auto;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: clamp(34px, 5vw, 44px);
-    padding: 0 12px;
+  display: block;
+  max-width: 100%;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: clamp(34px, 5vw, 44px);
+  padding: 0 12px;
 }
 
 /* Moving line */
 .split-title::before {
-    content: "";
-    position: absolute;
-    width: 50%;
-    left: -50%;
-    top: 25px;
-    border-bottom: 4px solid var(--secondary);
-    transition: transform 0.5s cubic-bezier(1, -0.04, 0, 1.16);
+  content: "";
+  position: absolute;
+  width: 50%;
+  left: -50%;
+  top: 25px;
+  border-bottom: 4px solid var(--secondary);
+  transition: transform 0.5s cubic-bezier(1, -0.04, 0, 1.16);
 }
 
 /* Spans */
 .split-title span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-    display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  display: block;
 }
 
 .split-title span:first-child {
-    top: 0;
+  top: 0;
 }
 
 .split-title span:last-child {
-    bottom: 0;
+  bottom: 0;
 }
 
 /* Duplicate text */
 .split-title span:first-child::before,
 .split-title span:last-child::before {
-    content: attr(data-text);
-    display: block;
-    color: var(--content);
-    transition: all 0.3s ease-out;
+  content: attr(data-text);
+  display: block;
+  color: var(--content);
+  transition: all 0.3s ease-out;
 }
 
 /* Initial split positions */
 .split-title span:first-child::before {
-    transform: translateY(22px);
+  transform: translateY(22px);
 }
 
 .split-title span:last-child::before {
-    transform: translateY(-48px);
+  transform: translateY(-48px);
 }
 
 /* Hover effects */
 .split-title:hover {
-    text-shadow: none;
+  text-shadow: none;
 }
 
 .split-title:hover::before {
-    transform: translateX(350px);
+  transform: translateX(350px);
 }
 
 .split-title:hover span:first-child::before {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .split-title:hover span:last-child::before {
-    transform: translateY(-25px);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+  transform: translateY(-25px);
+  }
 
 #Testimonials .content {
   padding-inline: clamp(24px, 7vw, 130px);
@@ -501,6 +495,201 @@ section > h2.split-title {
     transparent 100%
   );
 }
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid rgba(255, 0, 0, 0.18);
+  border-radius: 20px;
+  color: var(--background);
+}
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 24px;
+}
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(190deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.95));
+  border: 1px solid rgba(255, 0, 0, 0.12);
+  border-radius: 20px;
+}
+.skill-card h4 {
+  margin: 0px;
+  font-size: 18px;
+  color: var(--secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.skill-card ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 12px;
+}
+.skill-card li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+  padding: 10px 12px;
+  background: radial-gradient(circle, var(--primary), #e9e9e9);
+  border-radius: 16px;
+  min-height: 62px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-card li img {
+  width: auto;
+  height: 34px;
+  max-width: 34px;
+  max-height: 34px;
+  min-width: 34px;
+  object-fit: contain;
+  display: block;
+}
+.skill-card li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0px 12px var(--accent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -630,6 +819,12 @@ section > h2.split-title {
 }
 
 @media (max-width: 860px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+  .skill-card ul {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
   .navlink-wrapper {
     padding: 16px 24px;
     flex-wrap: wrap;
@@ -744,6 +939,9 @@ section > h2.split-title {
 }
 
 @media (max-width: 640px) {
+  .skill-card ul {
+    grid-template-columns: 1fr;
+  }
   .about-wrapper {
     padding: 30px 12px;
   }

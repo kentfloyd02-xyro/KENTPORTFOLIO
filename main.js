@@ -1,37 +1,37 @@
 const testimonials = [
   {
-    name: "Tech Romel",
-    role: "Rupal@20201",
+    name: "Project Partner",
+    role: "Team Collaboration",
     content:
-      "Sobrang galing at maaasahan sa coding at problem solving, kaso kupal minsan pero solid pa rin.",
+      "Reliable, easy to work with, and consistent in delivering clean results during group projects.",
     image: "KentImage.png",
   },
   {
-    name: "Tech Ronald",
-    role: "Caloocan Boy",
+    name: "Classmate",
+    role: "Web Development",
     content:
-      "Highly recommended talaga siya dahil mabilis gumawa ng solutions, kaso kupal pero funny naman.",
+      "Shows strong commitment to learning new tools and improving the quality of his work.",
     image: "KentImage.png",
   },
   {
-    name: "Tech Roland",
-    role: "YoungStunna G",
+    name: "Peer Reviewer",
+    role: "Code Review",
     content:
-      "Ang husay niya sa programming at design, may creativity at skills, kaso kupal lang minsan.",
+      "Communicates well, accepts feedback, and applies it quickly to build better solutions.",
     image: "KentImage.png",
   },
   {
-    name: "Tech Floyd",
-    role: "Chilli Garlic Supplier",
+    name: "Team Lead",
+    role: "Project Support",
     content:
-      "Malaki ang future nito sa tech industry dahil talented at masipag, kaso kupal lang talaga.",
+      "Demonstrates a professional attitude, solid problem solving, and a clear willingness to grow.",
     image: "KentImage.png",
   },
   {
-    name: "Tech Gwen",
-    role: "Founder Of Shembot",
+    name: "Mentor",
+    role: "Technical Guidance",
     content:
-      "Sayang kung hindi niya gagamitin ang skills niya kasi sobrang talented, kaso kupal pa rin.",
+      "A promising developer who brings focus, discipline, and a thoughtful approach to each task.",
     image: "KentImage.png",
   },
 ];
